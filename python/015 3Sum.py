@@ -45,6 +45,40 @@ class Solution:
             ans.append(list(res))
             
         return ans
+
+
+# Solution 1: O(N^2) 908ms top 96.49%
+# change the 3sum problem to 2sum problem
+class Solution:
+    def threeSum(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: List[List[int]]
+        """
+        if len(nums) < 3:
+            return []
+        nums.sort()
+        result = set()
+        for i, v in enumerate(nums[:-2]):
+            if i >= 1 and v == nums[i-1]:
+                continue
+            # judge the compute time
+            if v*3 > 0 or nums[-1]*3 < 0:
+                continue
+            hash_map = {}
+            target = -v
+            for x in nums[i+1:]:
+                diff = target - x
+                if diff in hash_map:
+                    result.add((v,-v-diff,diff))
+                hash_map[x] = 1 
+                
+        ans = []
+        for res in result:
+            ans.append(list(res))
+            
+        return ans
+        
         
 
 # Solution 2: O(N^2) 1388ms top 58.40%

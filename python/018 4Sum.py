@@ -58,6 +58,6 @@ class Solution:
             
         return ans
 
-# Attention:If you dont use the judge to reduce the computation time, you will get 1320ms computation time.
+# Attention:If you dont use the judgement to reduce the computation time, you will get 1320ms computation time.
 
 
