@@ -23,7 +23,8 @@ class Solution:
         hash_map = {}
         for i,num in enumerate(nums):
             diff = target - num
-            if diff in hash_map:
+            # judge the key
+            if diff in hash_map:  
                 return [hash_map[diff], i]
             hash_map[num] = i
         
@@ -41,5 +42,6 @@ class Solution:
             hash_map[num] = i
         for i,num in enumerate(nums):
             diff = target - num
+            # Attention for repeated index
             if diff in hash_map and i != hash_map[diff]:
                 return [i,hash_map[diff]]
