@@ -12,7 +12,7 @@ return [0, 1].
 '''
 
 
-# Solution 1: O(N) 56ms top 96.48%
+# Solution 1: O(N) 36ms top 100%
 class Solution:
     def twoSum(self, nums, target):
         """
@@ -28,7 +28,7 @@ class Solution:
             hash_map[num] = i
         
 
-# Solution 2: O(N) 36ms top 100%
+# Solution 2: O(N) 56ms top 96.48%
 class Solution:
     def twoSum(self, nums, target):
         """
